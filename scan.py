@@ -15,10 +15,22 @@ while True:
     for(x,y,w,h) in wajah :
         cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
         id, conf = recognizer.predict(abu[y:y+h, x:x+w])
+        
+        if (id == 1):
+            id = 'Alan'
+        elif (id == 2):
+            id = 'Natan'
+        elif (id == 3):
+            id = 'Yogi'
+        elif (id == 4):
+            id = 'Oswal'
+        elif (id == 5):
+            id= 'Andi'
+
         cv2.putText(frame, str(id),(x+40, y-10), cv2.FONT_HERSHEY_DUPLEX,1,(0,255,0))
     cv2.imshow("Face Recognation", frame)
     key = cv2.waitKey(1)
-    if key == ord('a'):
+    if key == ord('q'):
         break
 video.release()
 cv2.destroyAllWindows()
