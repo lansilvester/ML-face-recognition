@@ -1,4 +1,6 @@
 ﻿# Machine Learning face-recognition 📷
+ ![Foto](https://user-images.githubusercontent.com/48589121/200715958-b3988afd-fa22-40e9-8c9e-3b60cff442a9.png)
+
 Face recognition dengan dataset yang telah tersedia.
 📸 Untuk menjalankannya
 > run rekam.py
