@@ -26,6 +26,8 @@ while True:
             id = 'Oswal'
         elif (id == 5):
             id= 'Andi'
+        else:
+            id = 'Unknown'
 
         cv2.putText(frame, str(id),(x+40, y-10), cv2.FONT_HERSHEY_DUPLEX,1,(0,255,0))
     cv2.imshow("Face Recognation", frame)
