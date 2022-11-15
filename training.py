@@ -1,8 +1,13 @@
+# Mengimport package yang diperlukan
 import cv2, os
 import numpy as np
 from PIL import Image
+
+# Membuat variabel recognizer
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
+# Untuk detector menggunakan file haarcascade_frontalface_default.xml
+detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+# Membuat fungsi dengan parameter path
 def getImagesWithLabels(path):
     imagePaths=[os.path.join(path,f) for f in os.listdir(path)]
     faceSamples=[]
@@ -18,4 +23,6 @@ def getImagesWithLabels(path):
     return faceSamples, Ids
 faces, Ids = getImagesWithLabels('Dataset')
 recognizer.train(faces, np.array(Ids))
+
+# Data training disimpan di folder Dataset dengan nama file training.xml
 recognizer.save('Dataset/training.xml')
