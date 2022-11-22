@@ -6,7 +6,6 @@ video = cv2.VideoCapture(camera, cv2.CAP_DSHOW)
 faceDeteksi = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # mengambil id
 id = input('Id : ')
-
 a = 0
 while True: 
     a = a + 1
@@ -16,7 +15,7 @@ while True:
 
     # Mendeteksi wajah
     wajah = faceDeteksi.detectMultiScale(abu,1.3,5)
-
+    print(wajah)
     for(x,y,w,h) in wajah:
         # Membuat file foto ke folder Dataset/ dengan identifikasi Id dan perulangan a
         cv2.imwrite('Dataset/User.'+str(id)+'.'+str(a)+'.jpg', abu[y:y+h,x:x+w])
