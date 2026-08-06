@@ -1,0 +1,4 @@
+# Wajib pakai opencv-contrib-python (bukan opencv-python) agar modul cv2.face / LBPH tersedia.
+opencv-contrib-python>=4.10
+numpy>=1.26
+pillow>=10.0
