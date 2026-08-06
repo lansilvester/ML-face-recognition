@@ -18,7 +18,7 @@ Aplikasi GUI pengenalan wajah dengan **deteksi Haar Cascade** dan **pengenalan L
 ## Screenshot
 
 **Beranda**
-![Beranda](assets/screenshots/Cuplikan layar 2026-08-06 111840.png)
+![Beranda](assets/screenshots/dashboardd.png)
 
 **Daftar Wajah** · **Latih Model** · **Pengenalan**
 ![Daftar Wajah](assets/screenshots/register.png)
